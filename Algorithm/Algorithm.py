@@ -607,9 +607,7 @@ def q2455():
     print(max)
 
 def q2914():
-    """
-    저작권
-    """
+    """저작권"""
     A, I = map(int, input().split())
 
     x = (I - 1) * A + 1
@@ -655,9 +653,7 @@ def q2720():
         print(Quarter, Dime, Nickel, Penny)
 
 def q10870():
-    """
-    피보나치 수 5
-    """
+    """피보나치 수 5"""
     def fibonacci(n):
         if n <= 1:
             return n
@@ -670,9 +666,7 @@ def q10870():
     print(fibonacci(number))
 # -------------------- 09/22/2023 FRIDAY --------------------
 def q10039():
-    """
-    평균 점수
-    """
+    """평균 점수"""
     number_of_students = 5
     scores = []
     sum = 0
@@ -691,9 +685,7 @@ def q10039():
     print(average)
 
 def q1085():
-    """
-    직사각형에서 탈출
-    """
+    """직사각형에서 탈출"""
     x, y, w, h = map(int, input().split())
 
     minimum_x = min(x - 0, w - x)
@@ -705,9 +697,7 @@ def q1085():
         print(minimum_y)
 
 def q11050():
-    """
-    이항 계수 1
-    """
+    """이항 계수 1"""
     N, K = map(int, input().split())
 
     N_result, K_result = 1, 1
@@ -745,9 +735,7 @@ def q10156():
     print(needs)
 
 def q9655():
-    """
-    돌 게임
-    """
+    """돌 게임"""
     N = int(input())
 
     if N % 2 == 1:
@@ -756,9 +744,7 @@ def q9655():
         print("CY")
 
 def q5522():
-    """
-    카드게임
-    """
+    """카드게임"""
     sum = 0
 
     for i in range(5):
@@ -768,9 +754,7 @@ def q5522():
     print(sum)
 
 def q10886():
-    """
-    0 = not cute / 1 = cute
-    """
+    """0 = not cute / 1 = cute"""
     N = int(input())
     agree, disagree = 0, 0
 
@@ -792,9 +776,7 @@ def q10886():
         pass
 
 def q2845():
-    """
-    파티가 끝나고 난 뒤
-    """
+    """파티가 끝나고 난 뒤"""
     L, M = map(int, input().split())
     total = L * M
     List = [0, 0, 0, 0, 0]
@@ -807,9 +789,7 @@ def q2845():
     print(*difference)
 
 def q2953():
-    """
-    나는 요리사다
-    """
+    """나는 요리사다"""
     scores = []
 
     for i in range(5):
@@ -818,9 +798,7 @@ def q2953():
     print(scores.index(max(scores)) + 1, max(scores))
 
 def q5565():
-    """
-    영수증
-    """
+    """영수증"""
     total = int(input())
 
     for i in range(9):
@@ -830,9 +808,7 @@ def q5565():
     print(total)
 
 def q5554():
-    """
-    심부름 가는 길
-    """
+    """심부름 가는 길"""
     total = 0
 
     for i in range(4):
@@ -842,3 +818,76 @@ def q5554():
     x, y = total // 60, total % 60
     print(x)
     print(y)
+# -------------------- 09/25/2023 MONDAY --------------------
+def q2903():
+    N = int(input())
+
+    print((2**N+1)**2)
+
+def q2460():
+    """지능형 기차2"""
+    maximum_people = 0
+    num_of_stops = 10
+    people = 0
+
+    for i in range(num_of_stops):
+        out_, in_ = map(int, input().split())
+        people += in_
+        people -= out_
+
+        if people > maximum_people:
+            maximum_people = people
+        else:
+            pass
+
+    print(maximum_people)
+
+def q5532():
+    """방학 숙제"""
+    import math
+
+    L = int(input())
+    A = int(input())
+    B = int(input())
+    C = int(input())
+    D = int(input())
+
+    korean, mathematics = math.ceil(A / C), math.ceil(B / D)
+
+    if korean > mathematics:
+        print(L - korean)
+    else:
+        print(L - mathematics)
+
+def q16394():
+    """홍익대학교"""
+    established = 1946
+
+    N = int(input())
+
+    print(N - established)
+
+def q2740():
+    """행렬 곱셈
+    inner product(dot product) 내적은 3중 루프 반복문이라는 것을 명심할 것!
+    """
+    N, M = map(int, input().split())
+    A = []
+    for n in range(N):
+        A.append( list( map( int, input().split() ) ) )
+
+    M, K = map(int, input().split())
+    B =[]
+    for m in range(M):
+        B.append( list( map( int, input().split() ) ) )
+
+    C = [[0 for j in range(K)] for i in range(N)]
+    for n in range(N):
+        for k in range(K):
+            for m in range(M):
+                C[n][k] += A[n][m] * B[m][k]
+
+    for n in range(N):
+        for k in range(K):
+            print(C[n][k], end=' ')
+        print()
