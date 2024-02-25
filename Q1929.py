@@ -22,7 +22,6 @@ for number in range(M, N+1):
             # if i == int(number ** 0.5):
         print(number)
 
-
 # m,n=map(int,input().split())
 
 # for i in range(m,n+1):
