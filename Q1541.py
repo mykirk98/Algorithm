@@ -11,3 +11,14 @@
 첫째 줄에 정답을 출력한다.
 abc
 """
+
+elements = input().split('-')
+sum = 0
+for i in elements[0].split('+'):
+    sum += int(i)
+
+for i in elements[1:]:
+    for j in i.split('+'):
+        sum -= int(j)
+
+print(sum)
