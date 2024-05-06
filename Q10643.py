@@ -12,6 +12,7 @@ Each of the eight lines of input contains the integer Si (0 ≤ Si ≤ 50, i = 1
 출력
 The first and only line of output must contain the required number.
 """
+
 pizza = [0] * 8
 for i in range(8):
     pizza[i] = int(input())
