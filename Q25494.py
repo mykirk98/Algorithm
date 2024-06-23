@@ -34,6 +34,7 @@ $(1 \le a, b, c \le 60)$ 
 출력
 한 줄에 하나씩 정답을 출력한다.
 """
+
 for T in range(int(input())):
     a, b, c = map(int, input().split())
 
