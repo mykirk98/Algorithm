@@ -11,6 +11,7 @@ N이 2의 제곱수면 1을 아니면 0을 출력하는 프로그램을 작성�
 
 N = int(input())
 square_of_2 = 1
+
 while True:
     if square_of_2 == N:
         print(1)
