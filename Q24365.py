@@ -25,4 +25,4 @@ total += B - average
 A += B - average
 
 print(total)
-print(A, B, C)
+# print(A, B, C)
